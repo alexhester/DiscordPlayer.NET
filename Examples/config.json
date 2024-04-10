@@ -1,0 +1,6 @@
+{
+    "token": "token",
+    "clientId": "client-id",
+    "guildId": "guild-id",
+    "youtubeApiKey": "youtube-data-api-v3-apikey-from-console.cloud.google.com"
+  }

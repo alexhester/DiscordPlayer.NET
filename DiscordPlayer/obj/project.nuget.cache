@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ubZJOKFOlsVimsrA2kuXYclTk0bJMAwy+arQ2brGDBKzHa9Jm17MtgiLtFm75F+AyS8X0yiHa4FKqBObM6rbbA==",
+  "dgSpecHash": "8IzVYyo1PKrX1eFAoEnwbYWvaoPP3UMsdyZCF6Iej5BcOaE3YkTGLP7H7NPHwPZ2tXp/9UWMTzV6FjzuuROeIA==",
   "success": true,
-  "projectFilePath": "D:\\VS Projects\\DiscordPlayer\\DiscordPlayer\\DiscordPlayer.csproj",
+  "projectFilePath": "D:\\VS Projects\\DiscordPlayer.NET\\DiscordPlayer\\DiscordPlayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gamer\\.nuget\\packages\\dsharpplus\\4.4.6\\dsharpplus.4.4.6.nupkg.sha512",
     "C:\\Users\\Gamer\\.nuget\\packages\\dsharpplus.voicenext\\4.4.6\\dsharpplus.voicenext.4.4.6.nupkg.sha512",

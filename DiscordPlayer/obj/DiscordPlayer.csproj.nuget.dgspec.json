@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Projects\\DiscordPlayer\\DiscordPlayer\\DiscordPlayer.csproj": {}
+    "D:\\VS Projects\\DiscordPlayer.NET\\DiscordPlayer\\DiscordPlayer.csproj": {}
   },
   "projects": {
-    "D:\\VS Projects\\DiscordPlayer\\DiscordPlayer\\DiscordPlayer.csproj": {
+    "D:\\VS Projects\\DiscordPlayer.NET\\DiscordPlayer\\DiscordPlayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Projects\\DiscordPlayer\\DiscordPlayer\\DiscordPlayer.csproj",
+        "projectUniqueName": "D:\\VS Projects\\DiscordPlayer.NET\\DiscordPlayer\\DiscordPlayer.csproj",
         "projectName": "DiscordPlayer",
-        "projectPath": "D:\\VS Projects\\DiscordPlayer\\DiscordPlayer\\DiscordPlayer.csproj",
+        "projectPath": "D:\\VS Projects\\DiscordPlayer.NET\\DiscordPlayer\\DiscordPlayer.csproj",
         "packagesPath": "C:\\Users\\Gamer\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Projects\\DiscordPlayer\\DiscordPlayer\\obj\\",
+        "outputPath": "D:\\VS Projects\\DiscordPlayer.NET\\DiscordPlayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
