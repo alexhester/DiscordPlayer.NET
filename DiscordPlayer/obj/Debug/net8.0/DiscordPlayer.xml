@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DiscordPlayer</name>
+    </assembly>
+    <members>
+        <member name="T:DiscordPlayer.LogMessage">
+            <summary>
+            Struct that contains Severity and Message
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.LogMessage.Sender">
+            <summary>
+            Sender of the message
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.LogMessage.Severity">
+            <summary>
+            Severity of the message
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.LogMessage.Message">
+            <summary>
+            LogMessage Message
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.LogMessage.TimeStamp">
+            <summary>
+            What time the message is created
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.Severity">
+            <summary>
+            Severity of the message
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.Severity.INFO">
+            <summary>
+            Information
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.Severity.WARNING">
+            <summary>
+            A warning
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.Severity.ERROR">
+            <summary>
+            An error
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.Sender">
+            <summary>
+            Sender of the message
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.Sender.DOWNLOAD">
+            <summary>
+            Downloads
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.Sender.SEARCH">
+            <summary>
+            Searches
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.Sender.DISCORDPLAYER">
+            <summary>
+            DiscordPlayer.NET
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.LoggingService">
+            <summary>
+            LoggingService class
+            </summary>
+        </member>
+        <member name="M:DiscordPlayer.LoggingService.LogMessage(DiscordPlayer.Sender,DiscordPlayer.Severity,System.String)">
+            <summary>
+            Logs a message to the console
+            </summary>
+            <param name="sender"></param>
+            <param name="severity"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:DiscordPlayer.Player">
+            <summary>
+            DiscordPlayer
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.Player.Events">
+            <summary>
+            Contains subscribable events for the Player
+            </summary>
+        </member>
+        <member name="M:DiscordPlayer.Player.Initialize(DSharpPlus.DiscordClient,DSharpPlus.Entities.DiscordGuild,System.String)">
+            <summary>
+            Initializes the player
+                <list type="table">
+                    <item>
+                        <description>[REQUIRED]</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:DSharpPlus.DiscordClient"/> <paramref name="discord"/></term>
+                        <description>Your bot's client</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:DSharpPlus.Entities.DiscordGuild"/> <paramref name="guild"/></term>
+                        <description>Your bot's guild</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.String"/> <paramref name="youtubeApiKey"/></term>
+                        <description>Youtube Data API Key from console.cloud.google.com</description>
+                    </item>
+                    <item>
+                        <description>[OPTIONAL]</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.String"/> downloadsPath</term>
+                        <description>Where to store downloaded Youtube videos, defaults to ./downloads/</description>
+                    </item>
+                </list>
+            </summary>
+            <param name="discord"></param>
+            <param name="guild"></param>
+            <param name="youtubeApiKey"></param>
+        </member>
+        <member name="M:DiscordPlayer.Player.Initialize(DSharpPlus.DiscordClient,DSharpPlus.Entities.DiscordGuild,System.String,System.String)">
+            <summary>
+            Initializes the player
+                <list type="table">
+                    <item>
+                        <description>[REQUIRED]</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:DSharpPlus.DiscordClient"/> <paramref name="discord"/></term>
+                        <description>Your bot's client</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:DSharpPlus.Entities.DiscordGuild"/> <paramref name="guild"/></term>
+                        <description>Your bot's guild</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.String"/> <paramref name="youtubeApiKey"/></term>
+                        <description>Youtube Data API Key from console.cloud.google.com</description>
+                    </item>
+                    <item>
+                        <description>[OPTIONAL]</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.String"/> <paramref name="downloadsPath"/></term>
+                        <description>Where to store downloaded Youtube videos, defaults to ./downloads/</description>
+                    </item>
+                </list>
+            </summary>
+            <param name="discord"></param>
+            <param name="guild"></param>
+            <param name="downloadsPath"></param>
+            <param name="youtubeApiKey"></param>
+        </member>
+        <member name="M:DiscordPlayer.Player.Search(System.String)">
+            <summary>
+            Searches for a query, or link to a playlist/video
+            </summary>
+            <param name="query"></param>
+            <returns><see cref="T:DiscordPlayer.PlayerResult"/></returns>
+        </member>
+        <member name="M:DiscordPlayer.Player.AddToQueue(DSharpPlus.Entities.DiscordChannel,System.Collections.Generic.List{DiscordPlayer.Track})">
+            <summary>
+            Adds a List of Track(s) to the queue and begins playing
+            </summary>
+            <param name="channel"></param>
+            <param name="tracks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiscordPlayer.Player.AddToQueue(DSharpPlus.Entities.DiscordChannel,System.Collections.Generic.List{DiscordPlayer.Track},DiscordPlayer.NodeOptions)">
+            <summary>
+            Adds a List of Track(s) to the queue and begins playing, and sets the Player NodeOptions
+            </summary>
+            <param name="channel"></param>
+            <param name="tracks"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiscordPlayer.Player.Skip(System.Int32)">
+            <summary>
+            Skips to a specified index of the queue
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiscordPlayer.Player.Skip">
+            <summary>
+            Skips the currently playing track
+            </summary>
+        </member>
+        <member name="M:DiscordPlayer.Player.Stop">
+            <summary>
+            Clears the queue and ends playback
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DiscordPlayer.Player.HasTracks">
+            <summary>
+            Returns true if the queue contains any tracks or if the player is currently playing a track
+            </summary>
+            <returns>Returns true if the queue contains any tracks or if the player is currently playing a track; otherwise, false</returns>
+        </member>
+        <member name="M:DiscordPlayer.Player.Insert(System.Collections.Generic.List{DiscordPlayer.Track},System.Int32)">
+            <summary>
+            Inserts track at a given <paramref name="index"/> in the queue
+                <list type="table">
+                    <item>
+                        <term><see cref="T:System.Collections.Generic.List`1"/> <paramref name="tracks"/></term>
+                        <description>The track(s) to insert</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.Int32"/> <paramref name="index"/></term>
+                        <description>The index to insert at</description>
+                    </item>
+                </list>
+            </summary>
+            <param name="tracks"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:DiscordPlayer.Player.ViewQueue">
+            <summary>
+            Returns a list of all tracks in the queue
+            </summary>
+            <returns>Returns List{Tracks}</returns>
+        </member>
+        <member name="P:DiscordPlayer.Player.PrintLog">
+            <summary>
+            Controls the Player's internal logging. Enabled by default.
+            </summary>
+            <returns>true if enabled; false if disabled</returns>
+        </member>
+        <member name="M:DiscordPlayer.PlayerSingleton.LeaveChannel">
+            <summary>
+            Leaves channel
+            </summary>
+        </member>
+        <member name="M:DiscordPlayer.PlayerSingleton.SearchYoutubeAsync(System.String)">
+            <summary>
+            Searches for a query on YouTube and returns a PlayerResult.
+            </summary>
+            <param name="query"></param>
+            <returns>Returns a PlayerResult</returns>
+        </member>
+        <member name="M:DiscordPlayer.PlayerSingleton.DownloadAsync(System.String)">
+            <summary>
+            Downloads a YouTube video from a URL and returns the path to the downloaded video.
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DiscordPlayer.NodeOptions">
+            <summary>
+            Options for the Player. Default values: leaveOnEnd = false, leaveOnEmpty = true, leaveOnStop = true, deleteAfterPlay = true
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.NodeOptions.leaveOnEnd">
+            <summary>
+            Leave when the queue is empty
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.NodeOptions.leaveOnEmpty">
+            <summary>
+            Leave when the channel is empty
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.NodeOptions.leaveOnStop">
+            <summary>
+            Leave on the Stop command
+            </summary>
+        </member>
+        <member name="F:DiscordPlayer.NodeOptions.deleteAfterPlay">
+            <summary>
+            Delete the file after playing
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.EventsSingleton">
+            <summary>
+            Contains subscribable events for the Player
+            </summary>
+        </member>
+        <member name="E:DiscordPlayer.EventsSingleton.TrackAdded">
+            <summary>
+            Fired when a Track is added to the queue
+            </summary>
+        </member>
+        <member name="E:DiscordPlayer.EventsSingleton.FinishedPlaying">
+            <summary>
+            Fired when a Track is finished playing
+            </summary>
+        </member>
+        <member name="E:DiscordPlayer.EventsSingleton.StartedPlaying">
+            <summary>
+            Fired when a Track begins playing
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.QueueSingleton">
+            <summary>
+            A singleton that contains a QueueableList of string filePath, where filePath is the location of a downloaded track
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.QueueableList`1">
+            <summary>
+            A List with added functions: Dequeue(), and Peek()
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.Dequeue">
+            <summary>
+            Removes and returns the first element of the QueueableList
+            </summary>
+            <returns>The first element of the QueueableList</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.Peek">
+            <summary>
+            Returns the first element of the QueueableList, without removing it
+            </summary>
+            <returns>The first element of the QueueableList</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="P:DiscordPlayer.QueueableList`1.Count">
+            <summary>
+            Gets the number of elements contained in the QueueableList
+            </summary>
+            <returns>The number of elements contained in the QueueableList</returns>
+        </member>
+        <member name="P:DiscordPlayer.QueueableList`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the QueueableList is read-only
+            </summary>
+            <returns>true if the QueueableList is read-only; otherwise, false</returns>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.Add(`0)">
+            <summary>
+            Adds an item to the QueueableList
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the elements of a QueueableList to an Array, starting at a particular Array index 
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.Insert(System.Int32,`0)">
+            <summary>
+            Inserts an item to the QueueableList at the specified index
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.IndexOf(`0)">
+            <summary>
+            Determines the index of a specified item in the QueueableList
+            </summary>
+            <param name="item"></param>
+            <returns>The index of item if found in the QueueableList; otherwise, -1</returns>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.Contains(`0)">
+            <summary>
+            Determines whether the QueueableList contains a specific value
+            </summary>
+            <param name="item"></param>
+            <returns>true if an item is found in the QueueableList; otherwise, false</returns>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.Remove(`0)">
+            <summary>
+            Removes the first occurrence of a specfic object from the QueueableList
+            </summary>
+            <param name="item"></param>
+            <returns>true if item was successfully removed from the QueueableList; otherwise, false. This method also returns false if item is not found in the original QueueableList</returns>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.RemoveAt(System.Int32)">
+            <summary>
+            Removes the item at the specified index
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.Clear">
+            <summary>
+            Removes all items from the QueueableList
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.QueueableList`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index
+            </summary>
+            <param name="index"></param>
+            <returns>The element at the specified index</returns>
+        </member>
+        <member name="M:DiscordPlayer.QueueableList`1.GetEnumerator">
+            <summary>
+            Returns an enumerator the iterates through the QueueableList
+            </summary>
+            <returns>An enumerator that can be used to iterate through the QueueableList</returns>
+        </member>
+        <member name="T:DiscordPlayer.PlayerResult">
+            <summary>
+            Contains Playlist and Track information
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.PlayerResult.IsPlaylist">
+            <summary>
+            Whether a this result contains a playlist or not
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.PlayerResult.PlaylistTitle">
+            <summary>
+            The title of the contained playlist
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.PlayerResult.PlaylistUrl">
+            <summary>
+            The url of the contained playlist
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.PlayerResult.PlaylistThumbnailUrl">
+            <summary>
+            The thumbnail image of the contained playlist
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.PlayerResult.Tracks">
+            <summary>
+            The Tracks contained in this result
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.PlayerResult.HasTracks">
+            <summary>
+            Whether this result contains Tracks or not
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.Track">
+            <summary>
+            Contains Track information
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.Track.Title">
+            <summary>
+            The title of a Track
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.Track.Url">
+            <summary>
+            The url of a Track
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.Track.Author">
+            <summary>
+            The author of a Track
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.Track.Content">
+            <summary>
+            Contains details about a Track. Contains things like duration.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.Track.ThumbnailUrl">
+            <summary>
+            The thumbnail of a Track
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.Track.UploadDate">
+            <summary>
+            The upload date of a Track
+            </summary>
+        </member>
+        <member name="M:DiscordPlayer.TimeConverter.ConvertISO(System.String)">
+            <summary>
+            Converts a duration from (string)ISO format to (string)HH:MM:SS
+            </summary>
+            <param name="iso"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DiscordPlayer.TimeConverter.ConvertMS(System.Int32)">
+            <summary>
+            Converts a duration from (int)Milliseconds to (string)HH:MM:SS
+            </summary>
+            <param name="ms"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DiscordPlayer.YouTube">
+            <summary>
+            Wrapper for youtube-dl
+            </summary>
+        </member>
+        <member name="T:DiscordPlayer.YoutubeContent">
+            <summary>
+            Contains content details and statistics of a Youtube video
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.Caption">
+            <summary>
+            The value of captions, indicated whether the video has captions or not.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.CommentCount">
+            <summary>
+            The number of comments for the video.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.Definition">
+            <summary>
+            The value of definition indicated whether the video is available in high definition or only in standard definition.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.DislikeCount">
+            <summary>
+            The number of users who have indicated that they disliked the video by giving it a negative rating.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.Duration">
+            <summary>
+            The link of the video. Formatted as HH:MM:SS.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.FavoriteCount">
+            <summary>
+            The number of users who currently have the video marked as a favorite video.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.LicensedContent">
+            <summary>
+            Indicates whether the video is licensed content.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.LikeCount">
+            <summary>
+            The number of users who have indicated that they liked the video by giving it a positive rating.
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.Projection">
+            <summary>
+            Specifies the projection format of the video/
+            </summary>
+        </member>
+        <member name="P:DiscordPlayer.YoutubeContent.ViewCount">
+            <summary>
+            The number of times the video has been viewed.
+            </summary>
+        </member>
+    </members>
+</doc>

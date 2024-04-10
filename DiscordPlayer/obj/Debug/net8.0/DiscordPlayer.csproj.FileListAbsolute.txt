@@ -1,0 +1,14 @@
+D:\VS Projects\DiscordPlayer\DiscordPlayer\bin\Debug\net8.0\DiscordPlayer.deps.json
+D:\VS Projects\DiscordPlayer\DiscordPlayer\bin\Debug\net8.0\DiscordPlayer.dll
+D:\VS Projects\DiscordPlayer\DiscordPlayer\bin\Debug\net8.0\DiscordPlayer.pdb
+D:\VS Projects\DiscordPlayer\DiscordPlayer\bin\Debug\net8.0\DiscordPlayer.xml
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.csproj.AssemblyReference.cache
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.AssemblyInfoInputs.cache
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.AssemblyInfo.cs
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.csproj.CoreCompileInputs.cache
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.dll
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\refint\DiscordPlayer.dll
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.xml
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\DiscordPlayer.pdb
+D:\VS Projects\DiscordPlayer\DiscordPlayer\obj\Debug\net8.0\ref\DiscordPlayer.dll
